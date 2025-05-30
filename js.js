@@ -188,3 +188,50 @@
 // greetUser();
 
 //7- DOM Manipulation:
+
+// const button = document.getElementById("changesText");
+// const textElement = document.querySelector(".text");
+
+// button.addEventListener("click", function () {
+
+//     textElement.innerHTML = "Thank you!";
+//     console.log(textElement);
+// })
+
+
+// const button = document.getElementById("addTask");
+// const todoList = document.querySelector(".todo-list");
+
+// button.addEventListener("click", function () {
+    
+//     const newItem = document.createElement("li");
+//     newItem.textContent = "Walk the dog";
+//     todoList.appendChild(newItem);
+    
+// });
+
+
+// const button = document.getElementById("changesImg");
+// const cityImg = document.getElementById("city");
+
+// button.addEventListener("click", function () {
+
+//     cityImg.src = "daniel-abadia-3hslPaZKqUM-unsplash.jpg"
+    
+// });
+
+
+const form = document.querySelector(".loginForm");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const userName = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (userName === "admin" && password === "1234") {
+        alert("Login successful!");
+    } else {
+        alert("Invalid username or password.");
+    }   
+});
